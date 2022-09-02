@@ -283,13 +283,13 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="PkgFolder\CreatorKitCore_1_0_20220831_1_managed.zip">
+    <None Include="PkgFolder\CreatorKitCore.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PkgFolder\CreatorKitReferencesCanvas_1_0_20220831_1.zip">
+    <None Include="PkgFolder\CreatorKitReferencesCanvas.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PkgFolder\CreatorKitReferencesMDA_1_0_20220831_1.zip">
+    <None Include="PkgFolder\CreatorKitReferencesMDA.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
