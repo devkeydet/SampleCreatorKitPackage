@@ -283,6 +283,15 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="PkgFolder\CreatorKitCore_1_0_20220831_1_managed.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PkgFolder\CreatorKitReferencesCanvas_1_0_20220831_1.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PkgFolder\CreatorKitReferencesMDA_1_0_20220831_1.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.17.3.44\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll" />

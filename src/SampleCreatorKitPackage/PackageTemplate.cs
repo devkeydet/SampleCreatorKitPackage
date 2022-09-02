@@ -1,4 +1,5 @@
 ﻿using Microsoft.Uii.Common.Entities;
+using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Tooling.PackageDeployment;
 using Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase;
 using System;
@@ -21,7 +22,16 @@ namespace SampleCreatorKitPackage
         /// </summary>
         public override void InitializeCustomExtension()
         {
-            // Do nothing. 
+            // Since this solution requires that PCF in canvas is enabled in the envrionment, we need to set that setting.
+            var query = new QueryExpression("organization");
+            //CrmSvc.IsReady
+            query.ColumnSet.AddColumns("iscustomcontrolsincanvasappsenabled");
+            var result = CrmSvc.RetrieveMultiple(query);
+            var environmentSettings = result.Entities[0];
+
+            // Enable PCF for canvas
+            environmentSettings["iscustomcontrolsincanvasappsenabled"] = true;
+            CrmSvc.Update(environmentSettings);
         }
 
         /// <summary>
@@ -29,7 +39,7 @@ namespace SampleCreatorKitPackage
         /// </summary>
         /// <returns></returns>
         public override bool BeforeImportStage()
-        {
+        {            
             return true; // do nothing here. 
         }
 
@@ -77,7 +87,7 @@ namespace SampleCreatorKitPackage
         /// <returns></returns>
         public override string GetNameOfImport(bool plural)
         {
-            return "Package Short Name";
+            return "Sample Creator Kit Package Deployer Package";
         }
 
         /// <summary>
@@ -98,7 +108,7 @@ namespace SampleCreatorKitPackage
         /// </summary>
         public override string GetImportPackageDescriptionText
         {
-            get { return "Package Description"; }
+            get { return "Example of how we might automate Creator Kit Deployment to make it easier to install.  This is the tech App Source uses to enable one to perform environment configurration changes before solution import, deploy multiple solutions, deploy data after solution import, etc."; }
         }
 
         /// <summary>
