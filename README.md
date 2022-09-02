@@ -1,5 +1,8 @@
 # Sample Creator Kit Package Deployer Package
 
+> [!WARNING]
+> This is a proof of concept.  Do not use this for your own deployment of the creator kit.  It is not maintained with current releases of the kit.  Current releases are available at https://github.com/microsoft/powercat-creator-kit.
+
 Example of how we might automate Creator Kit Deployment to make it easier to install.  This is the tech App Source uses to enable one to perform environment configurration changes before solution import, deploy multiple solutions, deploy data after solution import, etc.
 
 The sample does the following:
