@@ -10,6 +10,11 @@ The sample does the following:
 ## Installation
 
 1. Install the Power Apps CLI
+
+    ```
+     winget install Microsoft.PowerAppsCLI
+    ```
+
 1. Download the zip file from the release page
 1. Make sure you have a pac authentication proflie setup for your environment.
 
