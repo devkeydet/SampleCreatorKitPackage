@@ -12,7 +12,7 @@ The sample does the following:
 
 ## Installation
 
-1. Install the Power Apps CLI
+1. If you don't already have the Power Apps CLI installed, install it from [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI) or
 
     ```
      winget install Microsoft.PowerAppsCLI
