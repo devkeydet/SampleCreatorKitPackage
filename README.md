@@ -8,7 +8,7 @@ Example of how we might automate Creator Kit Deployment to make it easier to ins
 The sample does the following:
 
 - Enables PCF for canvas in the target environment
-- Imports the three solutions into the target environment
+- Imports the three solutions into the target environment in the correct order
 
 ## Installation
 
